@@ -1,0 +1,1 @@
+sbatch -o ./report/out%J_result -e ./report/err%J_result run.sh

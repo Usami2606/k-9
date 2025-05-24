@@ -20,9 +20,9 @@ int main(int argc, char* argv[]) {
     char hostname[256];
     gethostname(hostname, sizeof(hostname));
     // printf("Rank %d runnning on %s\n", rank, hostname);
-
+    
     if (argc >= 2) {
-        size = atoi(argv[1]);
+        size = atoi(argv[1]); // Get the array size from the argument
         if (size <= 0) {
             if (rank == 0) {
                 fprintf(stderr, "Invalid size specified: %s\n", argv[1]);
@@ -36,6 +36,7 @@ int main(int argc, char* argv[]) {
         MPI_Abort(MPI_COMM_WORLD, 1);
     }
 
+    // Check that number of process is not 1
     if (nprocs < 2) {
         if (rank == 0)  {
             fprintf(stderr, "This program requires at least 2 processes.\n");
@@ -57,18 +58,25 @@ int main(int argc, char* argv[]) {
     send = (double)rank;
 
     MPI_Barrier(MPI_COMM_WORLD);
-    printf("send : %f \n", send);
-    MPI_Allgather(&send, 1, MPI_DOUBLE, recvbuf, 1, MPI_DOUBLE, MPI_COMM_WORLD);
 
-    MPI_Barrier(MPI_COMM_WORLD);
 
-    printf("Process %d received: ", rank);
-    int i;
-    for (i = 0; i < nprocs; i++) {
-        printf("%d ", (int)recvbuf[i]);
-    }
-    printf("\n");
 
+
+    // printf("send : %f \n", send);
+    // MPI_Allgather(&send, 1, MPI_DOUBLE, recvbuf, 1, MPI_DOUBLE, MPI_COMM_WORLD);
+
+    // MPI_Barrier(MPI_COMM_WORLD);
+
+    // printf("Process %d received: ", rank);
+    // int i;
+    // for (i = 0; i < nprocs; i++) {
+    //     printf("%d ", (int)recvbuf[i]);
+    // }
+    // printf("\n");
+
+    free(recv_buf);
+
+    MPI_Barrier();
     MPI_Finalize();
     return 0;
 }

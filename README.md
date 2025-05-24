@@ -1,23 +1,26 @@
 # MPI_PerformanceTest
 
-## macbook M1 pro 
-sysctl -n hw.physicalcpu : 8
-sysctl -n hw.logicalcpu : 8
+- Executable files, binary files, and result folders are ignored by git
 
-## ppx
-lscpu
-Physical cpu core 
+## Building the execution enviroment
+```bash
+sh remote.sh
+```
+```bash
+. ./module.sh
+```
+- Adding "." will execute the sript in the current shell. No execution permission is required.
 
-## change hostname
-$sudo scutil --set HostName Usamis-Macbook-pro
+## Assign2
+- Parallelization experiments using OpenMP
 
-## check hostname 
-$hostname
+## Assign3
+- Communication experiments using MPI
 
-$scutil --get HostName
-$scutil --get LocalHostName
-$scutil --get ComputerName
+## Assign4
+- Application programming using Open MP and MPI independently
 
-Granting execution permissions
-chmod +x filename
+## Assign5
+- Hybridization of Gravity Programs
+
 

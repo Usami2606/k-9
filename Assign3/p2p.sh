@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 初期値
+# initial value
 value=256
 
 # 繰り返し回数

@@ -9,39 +9,39 @@ int main(int argc, char* argv[])
 {
     int size;
     double start, all_time;
-    int myrank, nprocs, i;
-    double *sendbuf, *recvbuf, *send_resbuf, *recv_resbuf;  // 配列の型をdoubleに変更
+    int rank, nprocs, i;
+    double *sendbuf, *recvbuf, *send_resbuf, *recv_resbuf;  // Change the array type to double
     MPI_Status status;
 
     MPI_Init(&argc, &argv);
 
-    MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
-    //printf("my rank is %d and size is %d\n", myrank, nprocs);
+    //printf("my rank is %d and size is %d\n", rank, nprocs);
 
     char hostname[256];
     gethostname(hostname, sizeof(hostname));
-    //printf("Rank %d running on %s\n", myrank, hostname);
+    //printf("Rank %d running on %s\n", rank, hostname);
 
     if (argc >= 2) {
-        size = atoi(argv[1]);  // 引数から配列サイズを取得
+        size = atoi(argv[1]);  // Get the array size from the argument
         if (size <= 0) {
-            if (myrank == 0) {
+            if (rank == 0) {
                 fprintf(stderr, "Invalid size specified: %s\n", argv[1]);
             }
             MPI_Abort(MPI_COMM_WORLD, 1);
         }
     } else {
-        if (myrank == 0) {
+        if (rank == 0) {
             fprintf(stderr, "Usage: %s <array_size>\n", argv[0]);
         }
         MPI_Abort(MPI_COMM_WORLD, 1);
     }
 
 
-    // ここでプロセス数が1でないことを確認
+    // Check that number of process is not 1
     if (nprocs < 2) {
-        if (myrank == 0) {
+        if (rank == 0) {
             fprintf(stderr, "This program requires at least 2 processes.\n");
         }
         MPI_Finalize();
@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
     }
 
     int t = 100;
-    sendbuf = malloc(sizeof(double) * size);  // 動的にサイズを変更
+    sendbuf = malloc(sizeof(double) * size);  // Dynamically resize
     recvbuf = malloc(sizeof(double) * size);
 
     send_resbuf = malloc(sizeof(double) * 1);
@@ -61,28 +61,28 @@ int main(int argc, char* argv[])
     memset(send_resbuf, 0, sizeof(double) * 1);
     memset(recv_resbuf, 0, sizeof(double) * 1);
 
-    // mallocの成功をチェック
+    // Check for malloc success
     if (sendbuf == NULL) {
         fprintf(stderr, "Memory allocation failed for size %d\n", size);
-        MPI_Abort(MPI_COMM_WORLD, 1);  // メモリ割り当てに失敗した場合、MPIプログラムを終了
+        MPI_Abort(MPI_COMM_WORLD, 1);  // If memory allocation fails, terminate the MPI program
     }
 
-    if (myrank == 0) {
-        // 送信するデータを設定
+    if (rank == 0) {
+        // Set the data to send
         for (i = 0; i < size; i++) {
             sendbuf[i] = (double)rand() / (double)RAND_MAX;
         }
     }
 
-    MPI_Barrier(MPI_COMM_WORLD);  // 同期を取る
+    MPI_Barrier(MPI_COMM_WORLD);  // Synchronization
 
     // 送信時間の計測
     // start = MPI_Wtime();
-    // if (myrank == 0) {
+    // if (rank == 0) {
     //     MPI_Send(sendbuf, size, MPI_DOUBLE, 1, 2025, MPI_COMM_WORLD);
     // }
 
-    // if (myrank == 1) {
+    // if (rank == 1) {
     //     MPI_Recv(recvbuf, size, MPI_DOUBLE, 0, 2025, MPI_COMM_WORLD, &status);
     // }
 
@@ -91,22 +91,22 @@ int main(int argc, char* argv[])
             start = MPI_Wtime();
         }
 
-        if (myrank == 0) {
+        if (rank == 0) {
             MPI_Send(sendbuf, size, MPI_DOUBLE, 1, t, MPI_COMM_WORLD);
             MPI_Recv(sendbuf, size, MPI_DOUBLE, 1, t, MPI_COMM_WORLD,
                 &status);
-        } else if (myrank == 1) {
+        } else if (rank == 1) {
             MPI_Recv(recvbuf, size, MPI_DOUBLE, 0, t, MPI_COMM_WORLD, &status);
             MPI_Send(sendbuf, size, MPI_DOUBLE, 0, t, MPI_COMM_WORLD);
         }
     }
 
     MPI_Barrier(MPI_COMM_WORLD);
-    all_time = MPI_Wtime() - start;  // バリア同期の時間を計測
+    all_time = MPI_Wtime() - start; 
 
 
-    // 結果の表示
-    if (myrank == 0) {
+    // Result Display
+    if (rank == 0) {
         //printf("rank0 send time: %f\n", all_time);
         send_resbuf[0] = all_time;
     } else if (myrank == 1) {
@@ -115,9 +115,9 @@ int main(int argc, char* argv[])
 
     MPI_Barrier(MPI_COMM_WORLD);
 
-    if (myrank == 0) {
+    if (rank == 0) {
         MPI_Send(send_resbuf, 1, MPI_DOUBLE, 1, 428, MPI_COMM_WORLD);
-    } else if (myrank == 1) {
+    } else if (rank == 1) {
         MPI_Recv(recv_resbuf, 1, MPI_DOUBLE, 0, 428, MPI_COMM_WORLD, &status);
 
         if (recv_resbuf[0] > all_time) {
@@ -127,7 +127,7 @@ int main(int argc, char* argv[])
         }
     }
 
-    // bufのメモリ解放
+    // Free the buf memory
     free(sendbuf);
     free(recvbuf);
     free(send_resbuf);
