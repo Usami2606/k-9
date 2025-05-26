@@ -1,6 +1,6 @@
 BIN_DIR = bin
 TARGET = $(BIN_DIR)/runprog
-FILE ?= allgather.c
+FILE ?= p2p.c
 
 
 run:

@@ -6,8 +6,8 @@
 #include <string.h>
 
 int main(int argc, char* argv[]) {
-    int size;
-    double send;
+    int length;
+    double send, start, all_time;
     int rank, nprocs;
     double *recvbuf;
 
@@ -22,8 +22,8 @@ int main(int argc, char* argv[]) {
     // printf("Rank %d runnning on %s\n", rank, hostname);
     
     if (argc >= 2) {
-        size = atoi(argv[1]); // Get the array size from the argument
-        if (size <= 0) {
+        length = atoi(argv[1]); // Get the array size from the argument
+        if (length <= 0) {
             if (rank == 0) {
                 fprintf(stderr, "Invalid size specified: %s\n", argv[1]);
             }
@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
 
     // check malloc success
     if (recvbuf == NULL) {
-        fprintf(stderr, "Memory allocation failed for size %d\n", size);
+        fprintf(stderr, "Memory allocation failed for size %d\n", length);
         MPI_Abort(MPI_COMM_WORLD, 1);
     }
 

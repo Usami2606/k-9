@@ -7,25 +7,25 @@
 
 int main(int argc, char* argv[])
 {
-    int size;
+    int length;
     double start, all_time;
-    int rank, nprocs, i;
+    int rank, size, i;
     double *sendbuf, *recvbuf, *send_resbuf, *recv_resbuf;  // Change the array type to double
     MPI_Status status;
 
     MPI_Init(&argc, &argv);
 
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
-    //printf("my rank is %d and size is %d\n", rank, nprocs);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    //printf("my rank is %d and size is %d\n", rank, size);
 
     char hostname[256];
     gethostname(hostname, sizeof(hostname));
     //printf("Rank %d running on %s\n", rank, hostname);
 
     if (argc >= 2) {
-        size = atoi(argv[1]);  // Get the array size from the argument
-        if (size <= 0) {
+        length = atoi(argv[1]);  // Get the array size from the argument
+        if (length <= 0) {
             if (rank == 0) {
                 fprintf(stderr, "Invalid size specified: %s\n", argv[1]);
             }
@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 
 
     // Check that number of process is not 1
-    if (nprocs < 2) {
+    if (size < 2) {
         if (rank == 0) {
             fprintf(stderr, "This program requires at least 2 processes.\n");
         }
@@ -49,28 +49,28 @@ int main(int argc, char* argv[])
     }
 
     int t = 100;
-    sendbuf = malloc(sizeof(double) * size);  // Dynamically resize
-    recvbuf = malloc(sizeof(double) * size);
+    sendbuf = malloc(sizeof(double) * length);  // Dynamically resize
+    recvbuf = malloc(sizeof(double) * length);
 
     send_resbuf = malloc(sizeof(double) * 1);
     recv_resbuf = malloc(sizeof(double) * 1);
 
-    memset(sendbuf, 0, sizeof(double) * size);
-    memset(recvbuf, 0, sizeof(double) * size);
+    // Check for malloc success
+    if (sendbuf == NULL) {
+        fprintf(stderr, "Memory allocation failed for size %d\n", length);
+        MPI_Abort(MPI_COMM_WORLD, 1);  // If memory allocation fails, terminate the MPI program
+    }
+
+    memset(sendbuf, 0, sizeof(double) * length);
+    memset(recvbuf, 0, sizeof(double) * length);
 
     memset(send_resbuf, 0, sizeof(double) * 1);
     memset(recv_resbuf, 0, sizeof(double) * 1);
 
-    // Check for malloc success
-    if (sendbuf == NULL) {
-        fprintf(stderr, "Memory allocation failed for size %d\n", size);
-        MPI_Abort(MPI_COMM_WORLD, 1);  // If memory allocation fails, terminate the MPI program
-    }
-
+    // Set the data to send
     if (rank == 0) {
-        // Set the data to send
-        for (i = 0; i < size; i++) {
-            sendbuf[i] = (double)rand() / (double)RAND_MAX;
+        for (i = 0; i < length; i++) {
+            sendbuf[i] = (double)rand()
         }
     }
 
@@ -79,11 +79,11 @@ int main(int argc, char* argv[])
     // 送信時間の計測
     // start = MPI_Wtime();
     // if (rank == 0) {
-    //     MPI_Send(sendbuf, size, MPI_DOUBLE, 1, 2025, MPI_COMM_WORLD);
+    //     MPI_Send(sendbuf, length, MPI_DOUBLE, 1, 2025, MPI_COMM_WORLD);
     // }
 
     // if (rank == 1) {
-    //     MPI_Recv(recvbuf, size, MPI_DOUBLE, 0, 2025, MPI_COMM_WORLD, &status);
+    //     MPI_Recv(recvbuf, length, MPI_DOUBLE, 0, 2025, MPI_COMM_WORLD, &status);
     // }
 
     for (t = 0; t < 100; t++) {
@@ -92,12 +92,12 @@ int main(int argc, char* argv[])
         }
 
         if (rank == 0) {
-            MPI_Send(sendbuf, size, MPI_DOUBLE, 1, t, MPI_COMM_WORLD);
-            MPI_Recv(sendbuf, size, MPI_DOUBLE, 1, t, MPI_COMM_WORLD,
+            MPI_Send(sendbuf, length, MPI_DOUBLE, 1, t, MPI_COMM_WORLD);
+            MPI_Recv(sendbuf, length, MPI_DOUBLE, 1, t, MPI_COMM_WORLD,
                 &status);
         } else if (rank == 1) {
-            MPI_Recv(recvbuf, size, MPI_DOUBLE, 0, t, MPI_COMM_WORLD, &status);
-            MPI_Send(sendbuf, size, MPI_DOUBLE, 0, t, MPI_COMM_WORLD);
+            MPI_Recv(recvbuf, length, MPI_DOUBLE, 0, t, MPI_COMM_WORLD, &status);
+            MPI_Send(sendbuf, length, MPI_DOUBLE, 0, t, MPI_COMM_WORLD);
         }
     }
 
@@ -109,7 +109,7 @@ int main(int argc, char* argv[])
     if (rank == 0) {
         //printf("rank0 send time: %f\n", all_time);
         send_resbuf[0] = all_time;
-    } else if (myrank == 1) {
+    } else if (rank == 1) {
         //printf("rank1 recv time: %f\n", all_time);
     }
 

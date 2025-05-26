@@ -4,7 +4,7 @@
 value=256
 
 # 繰り返し回数
-count=20
+count=12
 
 # ループして ./a.out を実行
 for ((i=1; i<=count; i++)); do
