@@ -70,7 +70,7 @@ int main(int argc, char* argv[])
     // Set the data to send
     if (rank == 0) {
         for (i = 0; i < length; i++) {
-            sendbuf[i] = (double)rand()
+            sendbuf[i] = (double)rand();
         }
     }
 
@@ -102,7 +102,7 @@ int main(int argc, char* argv[])
     }
 
     MPI_Barrier(MPI_COMM_WORLD);
-    all_time = MPI_Wtime() - start; 
+    all_time = (MPI_Wtime() - start)/100; 
 
 
     // Result Display
