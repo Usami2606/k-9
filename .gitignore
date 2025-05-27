@@ -2,4 +2,5 @@ Assign3/bin/runprog
 Assign3/report
 
 *.o
+*.DS_Store
 *.out
