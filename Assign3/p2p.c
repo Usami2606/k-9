@@ -8,7 +8,7 @@
 int main(int argc, char* argv[])
 {
     int length;
-    double start, all_time;
+    double start, result_time;
     int rank, size, i;
     double *sendbuf, *recvbuf, *send_resbuf, *recv_resbuf;  // Change the array type to double
     MPI_Status status;
@@ -40,13 +40,13 @@ int main(int argc, char* argv[])
 
 
     // Check that number of process is not 1
-    if (size < 2) {
-        if (rank == 0) {
-            fprintf(stderr, "This program requires at least 2 processes.\n");
-        }
-        MPI_Finalize();
-        return 1;
-    }
+    // if (size < 2) {
+    //     if (rank == 0) {
+    //         fprintf(stderr, "This program requires at least 2 processes.\n");
+    //     }
+    //     MPI_Finalize();
+    //     return 1;
+    // }
 
     int t = 100;
     sendbuf = malloc(sizeof(double) * length);  // Dynamically resize
@@ -86,31 +86,27 @@ int main(int argc, char* argv[])
     //     MPI_Recv(recvbuf, length, MPI_DOUBLE, 0, 2025, MPI_COMM_WORLD, &status);
     // }
 
-    for (t = 0; t < 100; t++) {
-        if (t == 0) {
-            start = MPI_Wtime();
-        }
+    //for (t = 0; t < 101; t++) {
+        // if (t == 1) {
+             start = MPI_Wtime();
+        // }
 
         if (rank == 0) {
-            MPI_Send(sendbuf, length, MPI_DOUBLE, 1, t, MPI_COMM_WORLD);
-            MPI_Recv(sendbuf, length, MPI_DOUBLE, 1, t, MPI_COMM_WORLD,
-                &status);
+        MPI_Send(sendbuf, length, MPI_DOUBLE, 1, t, MPI_COMM_WORLD);
         } else if (rank == 1) {
-            MPI_Recv(recvbuf, length, MPI_DOUBLE, 0, t, MPI_COMM_WORLD, &status);
-            MPI_Send(sendbuf, length, MPI_DOUBLE, 0, t, MPI_COMM_WORLD);
+        MPI_Recv(recvbuf, length, MPI_DOUBLE, 0, t, MPI_COMM_WORLD, &status);
         }
-    }
+    //}
 
     MPI_Barrier(MPI_COMM_WORLD);
-    all_time = (MPI_Wtime() - start)/100; 
-
+    result_time = MPI_Wtime() - start; 
 
     // Result Display
     if (rank == 0) {
-        //printf("rank0 send time: %f\n", all_time);
-        send_resbuf[0] = all_time;
+        //printf("rank0 send time: %f\n", result_time);
+        send_resbuf[0] = result_time;
     } else if (rank == 1) {
-        //printf("rank1 recv time: %f\n", all_time);
+        //printf("rank1 recv time: %f\n", result_time);
     }
 
     MPI_Barrier(MPI_COMM_WORLD);
@@ -120,10 +116,10 @@ int main(int argc, char* argv[])
     } else if (rank == 1) {
         MPI_Recv(recv_resbuf, 1, MPI_DOUBLE, 0, 428, MPI_COMM_WORLD, &status);
 
-        if (recv_resbuf[0] > all_time) {
+        if (recv_resbuf[0] > result_time) {
             printf("result time: %f\n", recv_resbuf[0]);
         } else  {
-            printf("result time: %f\n", all_time);
+            printf("result time: %f\n", result_time);
         }
     }
 

@@ -1,82 +1,72 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include <sys/time.h>
 #include <unistd.h>
 #include <string.h>
 
 int main(int argc, char* argv[]) {
-    int length;
-    double send, start, all_time;
-    int rank, nprocs;
-    double *recvbuf;
-
     MPI_Init(&argc, &argv);
 
+    int rank, size, length;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
-    // print("my rank is %d and size is %d\n", rank, nprocs);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-    char hostname[256];
-    gethostname(hostname, sizeof(hostname));
-    // printf("Rank %d runnning on %s\n", rank, hostname);
-    
-    if (argc >= 2) {
-        length = atoi(argv[1]); // Get the array size from the argument
-        if (length <= 0) {
-            if (rank == 0) {
-                fprintf(stderr, "Invalid size specified: %s\n", argv[1]);
-            }
-            MPI_Abort(MPI_COMM_WORLD, 1);
-        }
+    char *procName = malloc(sizeof(char) * 300);
+    int len=0;
+    MPI_Get_processor_name(procName, &len);
+    //printf("%s:%d/%d\n",procName,rank,size);
+
+    if (argc == 2) {
+        length = atoi(argv[1]);
     } else {
-        if (rank == 0) {
-            fprintf(stderr, "Usage: %s <array_size>\n", argv[0]);
-        }
-        MPI_Abort(MPI_COMM_WORLD, 1);
+        fprintf(stderr, "Usage: %s <array_size>\n", argv[0]);
     }
+    //printf("%"d\n", length);
 
-    // Check that number of process is not 1
-    if (nprocs < 2) {
-        if (rank == 0)  {
-            fprintf(stderr, "This program requires at least 2 processes.\n");
-        }
-        MPI_Finalize();
-        return 1;
+    int *sendbuf = malloc(sizeof(int) * length);
+    int *recvbuf = malloc(sizeof(int) * length * size);
+
+    int t;
+
+    for (t = 0; t < length; t++) {
+        sendbuf[t] = rank * 100 + t;
     }
-
-    recvbuf = malloc(sizeof(double) * nprocs);
-
-    // check malloc success
-    if (recvbuf == NULL) {
-        fprintf(stderr, "Memory allocation failed for size %d\n", length);
-        MPI_Abort(MPI_COMM_WORLD, 1);
-    }
-
-    memset(recvbuf, 0, sizeof(double) * nprocs);
-
-    send = (double)rank;
 
     MPI_Barrier(MPI_COMM_WORLD);
+    double start = MPI_Wtime();
+
+    MPI_Allgather(sendbuf, length, MPI_INT, recvbuf, length, MPI_INT, MPI_COMM_WORLD);
+
+    MPI_Barrier(MPI_COMM_WORLD);
+    double res_time = MPI_Wtime() - start;
+    double max_time;
+
+    MPI_Reduce(&res_time, &max_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+
+    //printf("rank%d : result %f\n", rank, res_time);
 
 
 
 
-    // printf("send : %f \n", send);
-    // MPI_Allgather(&send, 1, MPI_DOUBLE, recvbuf, 1, MPI_DOUBLE, MPI_COMM_WORLD);
 
-    // MPI_Barrier(MPI_COMM_WORLD);
+    if (rank == 0) {
+        // int r;
+        // for (r = 0; r < size; r++) {
+        //     printf("Data from rank %d: ", r);
+        //     int i;
+        //     for (i = 0; i < 5; i++) { // 先頭5個だけ表示
+        //         printf("%d ", recvbuf[r * length + i]);
+        //     }
+        //     printf("...\n");
+        // }
 
-    // printf("Process %d received: ", rank);
-    // int i;
-    // for (i = 0; i < nprocs; i++) {
-    //     printf("%d ", (int)recvbuf[i]);
-    // }
-    // printf("\n");
+        printf("%f\n", max_time);
+    }
 
-    free(recv_buf);
+    free(sendbuf);
+    free(recvbuf);
 
-    MPI_Barrier();
     MPI_Finalize();
     return 0;
+
 }
