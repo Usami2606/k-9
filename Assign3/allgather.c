@@ -23,8 +23,8 @@ int main(int argc, char* argv[]) {
     }
     //printf("%"d\n", length);
 
-    int *sendbuf = malloc(sizeof(int) * length);
-    int *recvbuf = malloc(sizeof(int) * length * size);
+    double *sendbuf = malloc(sizeof(double) * length);
+    double *recvbuf = malloc(sizeof(double) * length * size);
 
     int t;
 
@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
     MPI_Barrier(MPI_COMM_WORLD);
     double start = MPI_Wtime();
 
-    MPI_Allgather(sendbuf, length, MPI_INT, recvbuf, length, MPI_INT, MPI_COMM_WORLD);
+    MPI_Allgather(sendbuf, length, MPI_DOUBLE, recvbuf, length, MPI_DOUBLE, MPI_COMM_WORLD);
 
     MPI_Barrier(MPI_COMM_WORLD);
     double res_time = MPI_Wtime() - start;
@@ -44,10 +44,6 @@ int main(int argc, char* argv[]) {
     MPI_Reduce(&res_time, &max_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
 
     //printf("rank%d : result %f\n", rank, res_time);
-
-
-
-
 
     if (rank == 0) {
         // int r;
@@ -59,7 +55,6 @@ int main(int argc, char* argv[]) {
         //     }
         //     printf("...\n");
         // }
-
         printf("%f\n", max_time);
     }
 

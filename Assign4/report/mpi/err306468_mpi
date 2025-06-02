@@ -1,0 +1,565 @@
+*** Error in `./bin/runprog': malloc(): memory corruption: 0x0000000001fc8df0 ***
+======= Backtrace: =========
+/usr/lib64/libc.so.6(+0x82b36)[0x7feb54c55b36]
+/usr/lib64/libc.so.6(__libc_malloc+0x4c)[0x7feb54c5878c]
+/usr/lib64/libc.so.6(+0x6ec4d)[0x7feb54c41c4d]
+./bin/runprog[0x400df0]
+./bin/runprog[0x401a2b]
+/usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x7feb54bf5555]
+./bin/runprog[0x400be9]
+======= Memory map: ========
+00400000-00402000 r-xp 00000000 00:28 116798273546                       /home/usami/k-9/Assign4/bin/runprog
+00602000-00603000 r--p 00002000 00:28 116798273546                       /home/usami/k-9/Assign4/bin/runprog
+00603000-00604000 rw-p 00003000 00:28 116798273546                       /home/usami/k-9/Assign4/bin/runprog
+01c84000-01d5a000 rw-p 00000000 00:00 0                                  [heap]
+01d5a000-01d5b000 rw-p 00000000 00:00 0                                  [heap]
+01d5b000-01d8c000 rw-p 00000000 00:00 0                                  [heap]
+01d8c000-01d91000 rw-p 00000000 00:00 0                                  [heap]
+01d91000-01de3000 rw-p 00000000 00:00 0                                  [heap]
+01de3000-01de4000 rw-p 00000000 00:00 0                                  [heap]
+01de4000-01df6000 rw-p 00000000 00:00 0                                  [heap]
+01df6000-01e06000 rw-p 00000000 00:00 0                                  [heap]
+01e06000-01e07000 rw-p 00000000 00:00 0                                  [heap]
+01e07000-01e17000 rw-p 00000000 00:00 0                                  [heap]
+01e17000-01e18000 rw-p 00000000 00:00 0                                  [heap]
+01e18000-01e2b000 rw-p 00000000 00:00 0                                  [heap]
+01e2b000-01e44000 rw-p 00000000 00:00 0                                  [heap]
+01e44000-01e45000 rw-p 00000000 00:00 0                                  [heap]
+01e45000-01e8e000 rw-p 00000000 00:00 0                                  [heap]
+01e8e000-01e8f000 rw-p 00000000 00:00 0                                  [heap]
+01e8f000-01eb3000 rw-p 00000000 00:00 0                                  [heap]
+01eb3000-01eb5000 rw-p 00000000 00:00 0                                  [heap]
+01eb5000-01ecd000 rw-p 00000000 00:00 0                                  [heap]
+01ecd000-01edd000 rw-p 00000000 00:00 0                                  [heap]
+01edd000-01ede000 rw-p 00000000 00:00 0                                  [heap]
+01ede000-01eee000 rw-p 00000000 00:00 0                                  [heap]
+01eee000-01eef000 rw-p 00000000 00:00 0                                  [heap]
+01eef000-01eff000 rw-p 00000000 00:00 0                                  [heap]
+01eff000-01f00000 rw-p 00000000 00:00 0                                  [heap]
+01f00000-01f10000 rw-p 00000000 00:00 0                                  [heap]
+01f10000-01f11000 rw-p 00000000 00:00 0                                  [heap]
+01f11000-01f21000 rw-p 00000000 00:00 0                                  [heap]
+01f21000-01f22000 rw-p 00000000 00:00 0                                  [heap]
+01f22000-01f32000 rw-p 00000000 00:00 0                                  [heap]
+01f32000-01f33000 rw-p 00000000 00:00 0                                  [heap]
+01f33000-01f43000 rw-p 00000000 00:00 0                                  [heap]
+01f43000-01f44000 rw-p 00000000 00:00 0                                  [heap]
+01f44000-01f54000 rw-p 00000000 00:00 0                                  [heap]
+01f54000-01f55000 rw-p 00000000 00:00 0                                  [heap]
+01f55000-01f5d000 rw-p 00000000 00:00 0                                  [heap]
+01f5d000-01f8c000 rw-p 00000000 00:00 0                                  [heap]
+01f8c000-01f8d000 rw-p 00000000 00:00 0                                  [heap]
+01f8d000-01fe2000 rw-p 00000000 00:00 0                                  [heap]
+7feb2c000000-7feb2c021000 rw-p 00000000 00:00 0 
+7feb2c021000-7feb30000000 ---p 00000000 00:00 0 
+7feb31bcc000-7feb31fe5000 rw-s 00000000 00:13 38084050                   /dev/shm/ucx_shm_posix_78f8a79c (deleted)
+7feb31fe5000-7feb32000000 rw-p 00000000 00:00 0 
+7feb32000000-7feb32a00000 rw-p 00000000 00:00 0 
+7feb32a00000-7feb32be6000 rw-p 00000000 00:00 0 
+7feb32be6000-7feb32fff000 rw-s 00000000 00:13 38017934                   /dev/shm/ucx_shm_posix_91a4dd2 (deleted)
+7feb32fff000-7feb33418000 rw-s 00000000 00:13 38963239                   /dev/shm/ucx_shm_posix_181f47d5 (deleted)
+7feb33418000-7feb33600000 rw-p 00000000 00:00 0 
+7feb33600000-7feb34a00000 rw-p 00000000 00:00 0 
+7feb34a00000-7feb34c00000 rw-p 00000000 00:00 0 
+7feb34c00000-7feb37200000 rw-p 00000000 00:00 0 
+7feb37200000-7feb37400000 rw-p 00000000 00:00 0 
+7feb37400000-7feb37a00000 rw-p 00000000 00:00 0 
+7feb37a00000-7feb37e34000 rw-p 00000000 00:00 0 
+7feb37e34000-7feb37eb9000 rw-p 00000000 00:00 0 
+7feb37eb9000-7feb37eba000 rw-p 00000000 00:00 0 
+7feb37eba000-7feb37eda000 rw-p 00000000 00:00 0 
+7feb37eda000-7feb37edc000 rw-p 00000000 00:00 0 
+7feb37edc000-7feb37f5c000 rw-p 00000000 00:00 0 
+7feb37f5c000-7feb37f5e000 rw-p 00000000 00:00 0 
+7feb37f5e000-7feb37f7e000 rw-p 00000000 00:00 0 
+7feb37f7e000-7feb37f7f000 rw-p 00000000 00:00 0 
+7feb37f7f000-7feb38004000 rw-p 00000000 00:00 0 
+7feb38004000-7feb38005000 rw-p 00000000 00:00 0 
+7feb38005000-7feb38025000 rw-p 00000000 00:00 0 
+7feb38025000-7feb38027000 rw-p 00000000 00:00 0 
+7feb38027000-7feb380a7000 rw-p 00000000 00:00 0 
+7feb380a7000-7feb38200000 rw-p 00000000 00:00 0 
+7feb38200000-7feb3a800000 rw-p 00000000 00:00 0 
+7feb3a800000-7feb3a8cf000 rw-p 00000000 00:00 0 
+7feb3a8cf000-7feb3a8ef000 rw-p 00000000 00:00 0 
+7feb3a8ef000-7feb3a91f000 rw-p 00000000 00:00 0 
+7feb3a91f000-7feb3a99f000 rw-p 00000000 00:00 0 
+7feb3a99f000-7feb3a9a1000 rw-p 00000000 00:00 0 
+7feb3a9a1000-7feb3aaa1000 rw-p 00000000 00:00 0 
+7feb3aaa1000-7feb3aaa3000 rw-p 00000000 00:00 0 
+7feb3aaa3000-7feb3aac3000 rw-p 00000000 00:00 0 
+7feb3aac3000-7feb3aac5000 rw-p 00000000 00:00 0 
+7feb3aac5000-7feb3ab45000 rw-p 00000000 00:00 0 
+7feb3ab45000-7feb3ab47000 rw-p 00000000 00:00 0 
+7feb3ab47000-7feb3ac47000 rw-p 00000000 00:00 0 
+7feb3ac47000-7feb3ac49000 rw-p 00000000 00:00 0 
+7feb3ac49000-7feb3ac89000 rw-p 00000000 00:00 0 
+7feb3ac89000-7feb3ac8b000 rw-p 00000000 00:00 0 
+7feb3ac8b000-7feb3accb000 rw-p 00000000 00:00 0 
+7feb3accb000-7feb3accd000 rw-p 00000000 00:00 0 
+7feb3accd000-7feb3ad4d000 rw-p 00000000 00:00 0 
+7feb3ad4d000-7feb3ad4e000 rw-p 00000000 00:00 0 
+7feb3ad4e000-7feb3b167000 rw-s 00000000 00:04 307134512                  /SYSV00000000 (deleted)
+7feb3b167000-7feb3b580000 rw-s 00000000 00:13 38962247                   /dev/shm/ucx_shm_posix_4a339c9 (deleted)
+7feb3b580000-7feb3b58f000 r-xp 00000000 00:2a 15698760239                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_ucx.so
+7feb3b58f000-7feb3b78e000 ---p 0000f000 00:2a 15698760239                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_ucx.so
+7feb3b78e000-7feb3b78f000 r--p 0000e000 00:2a 15698760239                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_ucx.so
+7feb3b78f000-7feb3b798000 rw-p 0000f000 00:2a 15698760239                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_ucx.so
+7feb3b798000-7feb3b7cc000 r-xp 00000000 00:2a 15698760237                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_rdma.so
+7feb3b7cc000-7feb3b9cb000 ---p 00034000 00:2a 15698760237                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_rdma.so
+7feb3b9cb000-7feb3b9cc000 r--p 00033000 00:2a 15698760237                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_rdma.so
+7feb3b9cc000-7feb3b9cd000 rw-p 00034000 00:2a 15698760237                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_rdma.so
+7feb3b9cd000-7feb3b9ec000 r-xp 00000000 00:2a 15698760235                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_pt2pt.so
+7feb3b9ec000-7feb3bbeb000 ---p 0001f000 00:2a 15698760235                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_pt2pt.so
+7feb3bbeb000-7feb3bbec000 r--p 0001e000 00:2a 15698760235                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_pt2pt.so
+7feb3bbec000-7feb3bbed000 rw-p 0001f000 00:2a 15698760235                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_pt2pt.so
+7feb3bdf8000-7feb3bdfe000 r-xp 00000000 00:2a 15698760231                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_sm.so
+7feb3bdfe000-7feb3bffd000 ---p 00006000 00:2a 15698760231                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_sm.so
+7feb3bffd000-7feb3bffe000 r--p 00005000 00:2a 15698760231                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_sm.so
+7feb3bffe000-7feb3c000000 rw-p 00006000 00:2a 15698760231                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_osc_sm.so
+7feb3c000000-7feb3c021000 rw-p 00000000 00:00 0 
+7feb3c021000-7feb40000000 ---p 00000000 00:00 0 
+7feb40009000-7feb40032000 rw-p 00000000 00:00 0 
+7feb40241000-7feb40250000 r-xp 00000000 00:2a 15698760209                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_tuned.so
+7feb40250000-7feb4044f000 ---p 0000f000 00:2a 15698760209                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_tuned.so
+7feb4044f000-7feb40450000 r--p 0000e000 00:2a 15698760209                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_tuned.so
+7feb40450000-7feb40451000 rw-p 0000f000 00:2a 15698760209                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_tuned.so
+7feb40451000-7feb40454000 r-xp 00000000 00:2a 15698760207                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_sync.so
+7feb40454000-7feb40654000 ---p 00003000 00:2a 15698760207                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_sync.so
+7feb40654000-7feb40655000 r--p 00003000 00:2a 15698760207                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_sync.so
+7feb40655000-7feb40656000 rw-p 00004000 00:2a 15698760207                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_sync.so
+7feb40656000-7feb4065a000 r-xp 00000000 00:2a 15698760205                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_spacc.so
+7feb4065a000-7feb40859000 ---p 00004000 00:2a 15698760205                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_spacc.so
+7feb40859000-7feb4085a000 r--p 00003000 00:2a 15698760205                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_spacc.so
+7feb4085a000-7feb4085b000 rw-p 00004000 00:2a 15698760205                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_spacc.so
+7feb4085b000-7feb4085d000 r-xp 00000000 00:2a 15084635397                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmca_common_sm.so.40.10.1
+7feb4085d000-7feb40a5c000 ---p 00002000 00:2a 15084635397                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmca_common_sm.so.40.10.1
+7feb40a5c000-7feb40a5d000 r--p 00001000 00:2a 15084635397                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmca_common_sm.so.40.10.1
+7feb40a5d000-7feb40a5e000 rw-p 00002000 00:2a 15084635397                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmca_common_sm.so.40.10.1
+7feb40a5e000-7feb40a64000 r-xp 00000000 00:2a 15698760203                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_sm.so
+7feb40a64000-7feb40c63000 ---p 00006000 00:2a 15698760203                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_sm.so
+7feb40c63000-7feb40c64000 r--p 00005000 00:2a 15698760203                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_sm.so
+7feb40c64000-7feb40c65000 rw-p 00006000 00:2a 15698760203                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_sm.so
+7feb40c65000-7feb40c67000 r-xp 00000000 00:2a 15698760201                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_self.so
+7feb40c67000-7feb40e67000 ---p 00002000 00:2a 15698760201                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_self.so
+7feb40e67000-7feb40e68000 r--p 00002000 00:2a 15698760201                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_self.so
+7feb40e68000-7feb40e69000 rw-p 00003000 00:2a 15698760201                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_self.so
+7feb40e69000-7feb40e82000 r-xp 00000000 00:2a 15698760199                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_libnbc.so
+7feb40e82000-7feb41081000 ---p 00019000 00:2a 15698760199                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_libnbc.so
+7feb41081000-7feb41082000 r--p 00018000 00:2a 15698760199                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_libnbc.so
+7feb41082000-7feb41083000 rw-p 00019000 00:2a 15698760199                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_libnbc.so
+7feb41083000-7feb41087000 r-xp 00000000 00:2a 15698760197                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_inter.so
+7feb41087000-7feb41286000 ---p 00004000 00:2a 15698760197                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_inter.so
+7feb41286000-7feb41287000 r--p 00003000 00:2a 15698760197                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_inter.so
+7feb41287000-7feb41288000 rw-p 00004000 00:2a 15698760197                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_inter.so
+7feb41288000-7feb41295000 r-xp 00000000 00:2a 15698760195                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_basic.so
+7feb41295000-7feb41494000 ---p 0000d000 00:2a 15698760195                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_basic.so
+7feb41494000-7feb41495000 r--p 0000c000 00:2a 15698760195                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_basic.so
+7feb41495000-7feb41496000 rw-p 0000d000 00:2a 15698760195                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_coll_basic.so
+7feb41496000-7feb41497000 ---p 00000000 00:00 0 
+7feb41497000-7feb41cd9000 rw-p 00000000 00:00 0 
+7feb41cd9000-7feb41cda000 r-xp 00000000 09:7f 1075086799                 /usr/lib64/libxpmem.so.0.0.0
+7feb41cda000-7feb41eda000 ---p 00001000 09:7f 1075086799                 /usr/lib64/libxpmem.so.0.0.0
+7feb41eda000-7feb41edb000 r--p 00001000 09:7f 1075086799                 /usr/lib64/libxpmem.so.0.0.0
+7feb41edb000-7feb41edc000 rw-p 00002000 09:7f 1075086799                 /usr/lib64/libxpmem.so.0.0.0
+7feb41edc000-7feb41ee0000 r-xp 00000000 09:7f 3221859596                 /usr/lib64/ucx/libuct_xpmem.so.0.0.0
+7feb41ee0000-7feb420df000 ---p 00004000 09:7f 3221859596                 /usr/lib64/ucx/libuct_xpmem.so.0.0.0
+7feb420df000-7feb420e0000 r--p 00003000 09:7f 3221859596                 /usr/lib64/ucx/libuct_xpmem.so.0.0.0
+7feb420e0000-7feb420e1000 rw-p 00004000 09:7f 3221859596                 /usr/lib64/ucx/libuct_xpmem.so.0.0.0
+7feb420e1000-7feb420e5000 r-xp 00000000 09:7f 3221859594                 /usr/lib64/ucx/libuct_knem.so.0.0.0
+7feb420e5000-7feb422e5000 ---p 00004000 09:7f 3221859594                 /usr/lib64/ucx/libuct_knem.so.0.0.0
+7feb422e5000-7feb422e6000 r--p 00004000 09:7f 3221859594                 /usr/lib64/ucx/libuct_knem.so.0.0.0
+7feb422e6000-7feb422e7000 rw-p 00005000 09:7f 3221859594                 /usr/lib64/ucx/libuct_knem.so.0.0.0
+7feb422e7000-7feb422f2000 r-xp 00000000 09:7f 3221859592                 /usr/lib64/ucx/libuct_rdmacm.so.0.0.0
+7feb422f2000-7feb424f1000 ---p 0000b000 09:7f 3221859592                 /usr/lib64/ucx/libuct_rdmacm.so.0.0.0
+7feb424f1000-7feb424f2000 r--p 0000a000 09:7f 3221859592                 /usr/lib64/ucx/libuct_rdmacm.so.0.0.0
+7feb424f2000-7feb424f3000 rw-p 0000b000 09:7f 3221859592                 /usr/lib64/ucx/libuct_rdmacm.so.0.0.0
+7feb424f3000-7feb42563000 r-xp 00000000 09:7f 3221859590                 /usr/lib64/ucx/libuct_ib.so.0.0.0
+7feb42563000-7feb42763000 ---p 00070000 09:7f 3221859590                 /usr/lib64/ucx/libuct_ib.so.0.0.0
+7feb42763000-7feb42764000 r--p 00070000 09:7f 3221859590                 /usr/lib64/ucx/libuct_ib.so.0.0.0
+7feb42764000-7feb4276a000 rw-p 00071000 09:7f 3221859590                 /usr/lib64/ucx/libuct_ib.so.0.0.0
+7feb4276a000-7feb428bc000 r-xp 00000000 09:7f 1075164099                 /usr/lib64/libucs.so.0.0.0
+7feb428bc000-7feb42abb000 ---p 00152000 09:7f 1075164099                 /usr/lib64/libucs.so.0.0.0
+7feb42abb000-7feb42ace000 r--p 00151000 09:7f 1075164099                 /usr/lib64/libucs.so.0.0.0
+7feb42ace000-7feb42ad6000 rw-p 00164000 09:7f 1075164099                 /usr/lib64/libucs.so.0.0.0
+7feb42ad6000-7feb42ade000 rw-p 00000000 00:00 0 
+7feb42ade000-7feb42af4000 r-xp 00000000 09:7f 1075164063                 /usr/lib64/libucm.so.0.0.0
+7feb42af4000-7feb42cf3000 ---p 00016000 09:7f 1075164063                 /usr/lib64/libucm.so.0.0.0
+7feb42cf3000-7feb42cf4000 r--p 00015000 09:7f 1075164063                 /usr/lib64/libucm.so.0.0.0
+7feb42cf4000-7feb42cf5000 rw-p 00016000 09:7f 1075164063                 /usr/lib64/libucm.so.0.0.0
+7feb42cf5000-7feb42cf6000 rw-p 00000000 00:00 0 
+7feb42cf6000-7feb42d25000 r-xp 00000000 09:7f 1075164101                 /usr/lib64/libuct.so.0.0.0
+7feb42d25000-7feb42f24000 ---p 0002f000 09:7f 1075164101                 /usr/lib64/libuct.so.0.0.0
+7feb42f24000-7feb42f25000 r--p 0002e000 09:7f 1075164101                 /usr/lib64/libuct.so.0.0.0
+7feb42f25000-7feb42f29000 rw-p 0002f000 09:7f 1075164101                 /usr/lib64/libuct.so.0.0.0
+7feb42f29000-7feb42fb3000 r-xp 00000000 09:7f 1075164097                 /usr/lib64/libucp.so.0.0.0
+7feb42fb3000-7feb431b3000 ---p 0008a000 09:7f 1075164097                 /usr/lib64/libucp.so.0.0.0
+7feb431b3000-7feb431b4000 r--p 0008a000 09:7f 1075164097                 /usr/lib64/libucp.so.0.0.0
+7feb431b4000-7feb431b8000 rw-p 0008b000 09:7f 1075164097                 /usr/lib64/libucp.so.0.0.0
+7feb431b8000-7feb431c2000 r-xp 00000000 00:2a 15698760247                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_pml_ucx.so
+7feb431c2000-7feb433c1000 ---p 0000a000 00:2a 15698760247                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_pml_ucx.so
+7feb433c1000-7feb433c2000 r--p 00009000 00:2a 15698760247                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_pml_ucx.so
+7feb433c2000-7feb433c3000 rw-p 0000a000 00:2a 15698760247                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_pml_ucx.so
+7feb436ff000-7feb43700000 rw-p 00000000 00:00 0 
+7feb43700000-7feb43720000 rw-p 00000000 00:00 0 
+7feb43720000-7feb43722000 rw-p 00000000 00:00 0 
+7feb43722000-7feb43742000 rw-p 00000000 00:00 0 
+7feb43742000-7feb43744000 rw-p 00000000 00:00 0 
+7feb43744000-7feb43764000 rw-p 00000000 00:00 0 
+7feb43764000-7feb43766000 rw-p 00000000 00:00 0 
+7feb43766000-7feb43786000 rw-p 00000000 00:00 0 
+7feb43786000-7feb437ad000 rw-p 00000000 00:00 0 
+7feb437ad000-7feb437cd000 rw-p 00000000 00:00 0 
+7feb437cd000-7feb437f4000 rw-p 00000000 00:00 0 
+7feb437f4000-7feb43814000 rw-p 00000000 00:00 0 
+7feb43814000-7feb4383b000 rw-p 00000000 00:00 0 
+7feb4383b000-7feb4385b000 rw-p 00000000 00:00 0 
+7feb4385b000-7feb43882000 rw-p 00000000 00:00 0 
+7feb43882000-7feb438a2000 rw-p 00000000 00:00 0 
+7feb438a2000-7feb438c9000 rw-p 00000000 00:00 0 
+7feb438c9000-7feb438e9000 rw-p 00000000 00:00 0 
+7feb438e9000-7feb43910000 rw-p 00000000 00:00 0 
+7feb43910000-7feb43930000 rw-p 00000000 00:00 0 
+7feb43930000-7feb439fa000 rw-p 00000000 00:00 0 
+7feb439fa000-7feb439fe000 r-xp 00000000 09:7f 3221859588                 /usr/lib64/ucx/libuct_cma.so.0.0.0
+7feb439fe000-7feb43bfd000 ---p 00004000 09:7f 3221859588                 /usr/lib64/ucx/libuct_cma.so.0.0.0
+7feb43bfd000-7feb43bfe000 r--p 00003000 09:7f 3221859588                 /usr/lib64/ucx/libuct_cma.so.0.0.0
+7feb43bfe000-7feb43bff000 rw-p 00004000 09:7f 3221859588                 /usr/lib64/ucx/libuct_cma.so.0.0.0
+7feb43bff000-7feb44000000 rw-s 00000000 00:13 38962222                   /dev/shm/vader_segment.ppx00.28b0001.0
+7feb44000000-7feb44025000 rw-p 00000000 00:00 0 
+7feb44025000-7feb48000000 ---p 00000000 00:00 0 
+7feb48011000-7feb481fe000 rw-p 00000000 00:00 0 
+7feb481fe000-7feb481ff000 r-xp 00000000 00:2a 15698753794                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_patcher_overwrite.so
+7feb481ff000-7feb483ff000 ---p 00001000 00:2a 15698753794                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_patcher_overwrite.so
+7feb483ff000-7feb48400000 r--p 00001000 00:2a 15698753794                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_patcher_overwrite.so
+7feb48400000-7feb48401000 rw-p 00002000 00:2a 15698753794                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_patcher_overwrite.so
+7feb48401000-7feb48408000 r-xp 00000000 00:2a 15698752827                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_vader.so
+7feb48408000-7feb48608000 ---p 00007000 00:2a 15698752827                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_vader.so
+7feb48608000-7feb48609000 r--p 00007000 00:2a 15698752827                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_vader.so
+7feb48609000-7feb4860b000 rw-p 00008000 00:2a 15698752827                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_vader.so
+7feb4860b000-7feb4861a000 r-xp 00000000 00:2a 15698752825                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_tcp.so
+7feb4861a000-7feb4881a000 ---p 0000f000 00:2a 15698752825                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_tcp.so
+7feb4881a000-7feb4881b000 r--p 0000f000 00:2a 15698752825                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_tcp.so
+7feb4881b000-7feb4881d000 rw-p 00010000 00:2a 15698752825                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_tcp.so
+7feb4881d000-7feb48835000 r-xp 00000000 09:7f 1075086823                 /usr/lib64/librdmacm.so.1.3.35.0
+7feb48835000-7feb48a34000 ---p 00018000 09:7f 1075086823                 /usr/lib64/librdmacm.so.1.3.35.0
+7feb48a34000-7feb48a35000 r--p 00017000 09:7f 1075086823                 /usr/lib64/librdmacm.so.1.3.35.0
+7feb48a35000-7feb48a36000 rw-p 00018000 09:7f 1075086823                 /usr/lib64/librdmacm.so.1.3.35.0
+7feb48a36000-7feb48a37000 rw-p 00000000 00:00 0 
+7feb48a37000-7feb48a6c000 r-xp 00000000 00:2a 15698752821                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_openib.so
+7feb48a6c000-7feb48c6b000 ---p 00035000 00:2a 15698752821                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_openib.so
+7feb48c6b000-7feb48c6c000 r--p 00034000 00:2a 15698752821                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_openib.so
+7feb48c6c000-7feb48c6e000 rw-p 00035000 00:2a 15698752821                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_openib.so
+7feb48c6e000-7feb48c6f000 rw-p 00000000 00:00 0 
+7feb48c6f000-7feb48c72000 r-xp 00000000 00:2a 15698752819                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_self.so
+7feb48c72000-7feb48e71000 ---p 00003000 00:2a 15698752819                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_self.so
+7feb48e71000-7feb48e72000 r--p 00002000 00:2a 15698752819                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_self.so
+7feb48e72000-7feb48e73000 rw-p 00003000 00:2a 15698752819                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_self.so
+7feb48e73000-7feb48e77000 r-xp 00000000 00:2a 15698760193                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_bml_r2.so
+7feb48e77000-7feb49076000 ---p 00004000 00:2a 15698760193                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_bml_r2.so
+7feb49076000-7feb49077000 r--p 00003000 00:2a 15698760193                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_bml_r2.so
+7feb49077000-7feb49078000 rw-p 00004000 00:2a 15698760193                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_bml_r2.so
+7feb49078000-7feb4907b000 r-xp 00000000 00:2a 15698753792                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_mpool_hugepage.so
+7feb4907b000-7feb4927b000 ---p 00003000 00:2a 15698753792                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_mpool_hugepage.so
+7feb4927b000-7feb4927c000 r--p 00003000 00:2a 15698753792                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_mpool_hugepage.so
+7feb4927c000-7feb4927d000 rw-p 00004000 00:2a 15698753792                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_mpool_hugepage.so
+7feb4927d000-7feb49280000 r-xp 00000000 00:2a 15698753804                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_rcache_grdma.so
+7feb49280000-7feb49480000 ---p 00003000 00:2a 15698753804                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_rcache_grdma.so
+7feb49480000-7feb49481000 r--p 00003000 00:2a 15698753804                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_rcache_grdma.so
+7feb49481000-7feb49482000 rw-p 00004000 00:2a 15698753804                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_rcache_grdma.so
+7feb49482000-7feb49484000 r-xp 00000000 00:2a 15698752817                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_allocator_bucket.so
+7feb49484000-7feb49683000 ---p 00002000 00:2a 15698752817                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_allocator_bucket.so
+7feb49683000-7feb49684000 r--p 00001000 00:2a 15698752817                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_allocator_bucket.so
+7feb49684000-7feb49685000 rw-p 00002000 00:2a 15698752817                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_allocator_bucket.so
+7feb49685000-7feb49688000 r-xp 00000000 00:2a 15698758177                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_rml_oob.so
+7feb49688000-7feb49887000 ---p 00003000 00:2a 15698758177                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_rml_oob.so
+7feb49887000-7feb49888000 r--p 00002000 00:2a 15698758177                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_rml_oob.so
+7feb49888000-7feb49889000 rw-p 00003000 00:2a 15698758177                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_rml_oob.so
+7feb49889000-7feb4988a000 rw-p 00000000 00:00 0 
+7feb4988a000-7feb49c8a000 rw-p 00000000 00:00 0 
+7feb49c8a000-7feb49c8c000 rw-p 00000000 00:00 0 
+7feb49c8c000-7feb49e8c000 rw-p 00000000 00:00 0 
+7feb49e8c000-7feb49e8e000 rw-p 00000000 00:00 0 
+7feb49e8e000-7feb4a08e000 rw-p 00000000 00:00 0 
+7feb4a08e000-7feb4a08f000 rw-p 00000000 00:00 0 
+7feb4a08f000-7feb4a0ef000 r-xp 00000000 09:7f 1075093861                 /usr/lib64/libmlx5.so.1.19.35.0
+7feb4a0ef000-7feb4a2ef000 ---p 00060000 09:7f 1075093861                 /usr/lib64/libmlx5.so.1.19.35.0
+7feb4a2ef000-7feb4a2f0000 r--p 00060000 09:7f 1075093861                 /usr/lib64/libmlx5.so.1.19.35.0
+7feb4a2f0000-7feb4a2f1000 rw-p 00061000 09:7f 1075093861                 /usr/lib64/libmlx5.so.1.19.35.0
+7feb4a2f1000-7feb4a2f3000 rw-p 00000000 00:00 0 
+7feb4a2f3000-7feb4a311000 r-xp 00000000 09:7f 1073775998                 /usr/lib64/libnl-3.so.200.23.0
+7feb4a311000-7feb4a511000 ---p 0001e000 09:7f 1073775998                 /usr/lib64/libnl-3.so.200.23.0
+7feb4a511000-7feb4a513000 r--p 0001e000 09:7f 1073775998                 /usr/lib64/libnl-3.so.200.23.0
+7feb4a513000-7feb4a514000 rw-p 00020000 09:7f 1073775998                 /usr/lib64/libnl-3.so.200.23.0
+7feb4a514000-7feb4a578000 r-xp 00000000 09:7f 1073776006                 /usr/lib64/libnl-route-3.so.200.23.0
+7feb4a578000-7feb4a777000 ---p 00064000 09:7f 1073776006                 /usr/lib64/libnl-route-3.so.200.23.0
+7feb4a777000-7feb4a77a000 r--p 00063000 09:7f 1073776006                 /usr/lib64/libnl-route-3.so.200.23.0
+7feb4a77a000-7feb4a77f000 rw-p 00066000 09:7f 1073776006                 /usr/lib64/libnl-route-3.so.200.23.0
+7feb4a77f000-7feb4a781000 rw-p 00000000 00:00 0 
+7feb4a781000-7feb4a78a000 r-xp 00000000 09:7f 1075086819                 /usr/lib64/libibumad.so.3.2.35.0
+7feb4a78a000-7feb4a989000 ---p 00009000 09:7f 1075086819                 /usr/lib64/libibumad.so.3.2.35.0
+7feb4a989000-7feb4a98a000 r--p 00008000 09:7f 1075086819                 /usr/lib64/libibumad.so.3.2.35.0
+7feb4a98a000-7feb4a98b000 rw-p 00009000 09:7f 1075086819                 /usr/lib64/libibumad.so.3.2.35.0
+7feb4a98b000-7feb4a9a8000 r-xp 00000000 09:7f 1075093859                 /usr/lib64/libibverbs.so.1.14.35.0
+7feb4a9a8000-7feb4aba8000 ---p 0001d000 09:7f 1075093859                 /usr/lib64/libibverbs.so.1.14.35.0
+7feb4aba8000-7feb4aba9000 r--p 0001d000 09:7f 1075093859                 /usr/lib64/libibverbs.so.1.14.35.0
+7feb4aba9000-7feb4abaa000 rw-p 0001e000 09:7f 1075093859                 /usr/lib64/libibverbs.so.1.14.35.0
+7feb4abaa000-7feb4abbb000 r-xp 00000000 09:7f 1075093586                 /usr/lib64/libosmcomp.so.3.2.0
+7feb4abbb000-7feb4adba000 ---p 00011000 09:7f 1075093586                 /usr/lib64/libosmcomp.so.3.2.0
+7feb4adba000-7feb4adbb000 r--p 00010000 09:7f 1075093586                 /usr/lib64/libosmcomp.so.3.2.0
+7feb4adbb000-7feb4adbc000 rw-p 00011000 09:7f 1075093586                 /usr/lib64/libosmcomp.so.3.2.0
+7feb4adbc000-7feb4adc0000 r-xp 00000000 00:2a 15084635401                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmca_common_verbs.so.40.10.2
+7feb4adc0000-7feb4afc0000 ---p 00004000 00:2a 15084635401                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmca_common_verbs.so.40.10.2
+7feb4afc0000-7feb4afc1000 r--p 00004000 00:2a 15084635401                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmca_common_verbs.so.40.10.2
+7feb4afc1000-7feb4afc2000 rw-p 00005000 00:2a 15084635401                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmca_common_verbs.so.40.10.2
+7feb4afc2000-7feb4afd2000 r-xp 00000000 00:2a 15698758146                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_oob_ud.so
+7feb4afd2000-7feb4b1d2000 ---p 00010000 00:2a 15698758146                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_oob_ud.so
+7feb4b1d2000-7feb4b1d3000 r--p 00010000 00:2a 15698758146                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_oob_ud.so
+7feb4b1d3000-7feb4b1d4000 rw-p 00011000 00:2a 15698758146                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_oob_ud.so
+7feb4b1d4000-7feb4b1e6000 r-xp 00000000 00:2a 15698758144                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_oob_tcp.so
+7feb4b1e6000-7feb4b3e5000 ---p 00012000 00:2a 15698758144                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_oob_tcp.so
+7feb4b3e5000-7feb4b3e6000 r--p 00011000 00:2a 15698758144                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_oob_tcp.so
+7feb4b3e6000-7feb4b3e7000 rw-p 00012000 00:2a 15698758144                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_oob_tcp.so
+7feb4b3e7000-7feb4b3ea000 r-xp 00000000 00:2a 15698758183                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_radix.so
+7feb4b3ea000-7feb4b5e9000 ---p 00003000 00:2a 15698758183                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_radix.so
+7feb4b5e9000-7feb4b5ea000 r--p 00002000 00:2a 15698758183                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_radix.so
+7feb4b5ea000-7feb4b5eb000 rw-p 00003000 00:2a 15698758183                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_radix.so
+7feb4b5eb000-7feb4b5ed000 r-xp 00000000 00:2a 15698758181                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_direct.so
+7feb4b5ed000-7feb4b7ec000 ---p 00002000 00:2a 15698758181                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_direct.so
+7feb4b7ec000-7feb4b7ed000 r--p 00001000 00:2a 15698758181                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_direct.so
+7feb4b7ed000-7feb4b7ee000 rw-p 00002000 00:2a 15698758181                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_direct.so
+7feb4b7ee000-7feb4b7f0000 r-xp 00000000 00:2a 15698758179                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_binomial.so
+7feb4b7f0000-7feb4b9f0000 ---p 00002000 00:2a 15698758179                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_binomial.so
+7feb4b9f0000-7feb4b9f1000 r--p 00002000 00:2a 15698758179                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_binomial.so
+7feb4b9f1000-7feb4b9f2000 rw-p 00003000 00:2a 15698758179                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_routed_binomial.so
+7feb4b9f2000-7feb4b9f3000 r-xp 00000000 00:2a 15698752823                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_sm.so
+7feb4b9f3000-7feb4bbf2000 ---p 00001000 00:2a 15698752823                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_sm.so
+7feb4bbf2000-7feb4bbf3000 r--p 00000000 00:2a 15698752823                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_sm.so
+7feb4bbf3000-7feb4bbf4000 rw-p 00001000 00:2a 15698752823                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_btl_sm.so
+7feb4bbf4000-7feb4bbf6000 r-xp 00000000 00:2a 15698752815                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_allocator_basic.so
+7feb4bbf6000-7feb4bdf6000 ---p 00002000 00:2a 15698752815                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_allocator_basic.so
+7feb4bdf6000-7feb4bdf7000 r--p 00002000 00:2a 15698752815                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_allocator_basic.so
+7feb4bdf7000-7feb4bdf8000 rw-p 00003000 00:2a 15698752815                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_allocator_basic.so
+7feb4bdf8000-7feb4bdfe000 r-xp 00000000 00:2a 15698753814                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_dfs_app.so
+7feb4bdfe000-7feb4bffe000 ---p 00006000 00:2a 15698753814                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_dfs_app.so
+7feb4bffe000-7feb4bfff000 r--p 00006000 00:2a 15698753814                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_dfs_app.so
+7feb4bfff000-7feb4c000000 rw-p 00007000 00:2a 15698753814                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_dfs_app.so
+7feb4c000000-7feb4c021000 rw-p 00000000 00:00 0 
+7feb4c021000-7feb50000000 ---p 00000000 00:00 0 
+7feb50000000-7feb50002000 rw-p 00000000 00:00 0 
+7feb50002000-7feb50005000 rw-s 00000000 00:00 0 
+7feb50005000-7feb50008000 rw-s 00000000 00:13 38964259                   /dev/shm/ucx_shm_posix_331d839f (deleted)
+7feb50008000-7feb5000b000 rw-s 00000000 00:00 0 
+7feb5000b000-7feb5000e000 rw-s 00000000 00:13 38084048                   /dev/shm/ucx_shm_posix_2d7be0ea (deleted)
+7feb5000e000-7feb50011000 rw-s 00000000 00:00 0 
+7feb50011000-7feb50016000 r-xp 00000000 00:2a 15698753844                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_grpcomm_direct.so
+7feb50016000-7feb50215000 ---p 00005000 00:2a 15698753844                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_grpcomm_direct.so
+7feb50215000-7feb50216000 r--p 00004000 00:2a 15698753844                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_grpcomm_direct.so
+7feb50216000-7feb50217000 rw-p 00005000 00:2a 15698753844                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_grpcomm_direct.so
+7feb50217000-7feb50219000 r-xp 00000000 00:2a 15698753820                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_errmgr_default_app.so
+7feb50219000-7feb50418000 ---p 00002000 00:2a 15698753820                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_errmgr_default_app.so
+7feb50418000-7feb50419000 r--p 00001000 00:2a 15698753820                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_errmgr_default_app.so
+7feb50419000-7feb5041a000 rw-p 00002000 00:2a 15698753820                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_errmgr_default_app.so
+7feb5041a000-7feb5041c000 r-xp 00000000 00:2a 15698758195                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_state_app.so
+7feb5041c000-7feb5061b000 ---p 00002000 00:2a 15698758195                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_state_app.so
+7feb5061b000-7feb5061c000 r--p 00001000 00:2a 15698758195                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_state_app.so
+7feb5061c000-7feb5061d000 rw-p 00002000 00:2a 15698758195                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_state_app.so
+7feb5061d000-7feb5061e000 ---p 00000000 00:00 0 
+7feb5061e000-7feb50e1e000 rw-p 00000000 00:00 0 
+7feb50e1e000-7feb50e27000 r-xp 00000000 00:2a 16729646866                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_preg_native.so
+7feb50e27000-7feb51027000 ---p 00009000 00:2a 16729646866                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_preg_native.so
+7feb51027000-7feb51028000 r--p 00009000 00:2a 16729646866                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_preg_native.so
+7feb51028000-7feb51029000 rw-p 0000a000 00:2a 16729646866                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_preg_native.so
+7feb51029000-7feb5103b000 r-xp 00000000 00:2a 16729646864                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_gds_hash.so
+7feb5103b000-7feb5123a000 ---p 00012000 00:2a 16729646864                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_gds_hash.so
+7feb5123a000-7feb5123b000 r--p 00011000 00:2a 16729646864                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_gds_hash.so
+7feb5123b000-7feb5123c000 rw-p 00012000 00:2a 16729646864                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_gds_hash.so
+7feb5123c000-7feb5123d000 r-xp 00000000 00:2a 16729646870                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_psec_none.so
+7feb5123d000-7feb5143c000 ---p 00001000 00:2a 16729646870                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_psec_none.so
+7feb5143c000-7feb5143d000 r--p 00000000 00:2a 16729646870                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_psec_none.so
+7feb5143d000-7feb5143e000 rw-p 00001000 00:2a 16729646870                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_psec_none.so
+7feb5143e000-7feb51446000 r-xp 00000000 00:2a 16729646880                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_ptl_usock.so
+7feb51446000-7feb51645000 ---p 00008000 00:2a 16729646880                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_ptl_usock.so
+7feb51645000-7feb51646000 r--p 00007000 00:2a 16729646880                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_ptl_usock.so
+7feb51646000-7feb51647000 rw-p 00008000 00:2a 16729646880                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_ptl_usock.so
+7feb51647000-7feb51657000 r-xp 00000000 00:2a 16729646878                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_ptl_tcp.so
+7feb51657000-7feb51857000 ---p 00010000 00:2a 16729646878                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_ptl_tcp.so
+7feb51857000-7feb51858000 r--p 00010000 00:2a 16729646878                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_ptl_tcp.so
+7feb51858000-7feb51859000 rw-p 00011000 00:2a 16729646878                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_ptl_tcp.so
+7feb51859000-7feb51860000 r-xp 00000000 00:2a 16729646862                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v21.so
+7feb51860000-7feb51a5f000 ---p 00007000 00:2a 16729646862                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v21.so
+7feb51a5f000-7feb51a60000 r--p 00006000 00:2a 16729646862                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v21.so
+7feb51a60000-7feb51a61000 rw-p 00007000 00:2a 16729646862                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v21.so
+7feb51a61000-7feb51a7b000 r-xp 00000000 00:2a 16729646860                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v20.so
+7feb51a7b000-7feb51c7a000 ---p 0001a000 00:2a 16729646860                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v20.so
+7feb51c7a000-7feb51c7b000 r--p 00019000 00:2a 16729646860                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v20.so
+7feb51c7b000-7feb51c7c000 rw-p 0001a000 00:2a 16729646860                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v20.so
+7feb51c7c000-7feb51c8e000 r-xp 00000000 00:2a 16729646858                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v12.so
+7feb51c8e000-7feb51e8d000 ---p 00012000 00:2a 16729646858                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v12.so
+7feb51e8d000-7feb51e8e000 r--p 00011000 00:2a 16729646858                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v12.so
+7feb51e8e000-7feb51e8f000 rw-p 00012000 00:2a 16729646858                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_bfrops_v12.so
+7feb51e8f000-7feb51f9f000 r-xp 00000000 00:2a 15698753800                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_pmix_pmix2x.so
+7feb51f9f000-7feb5219f000 ---p 00110000 00:2a 15698753800                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_pmix_pmix2x.so
+7feb5219f000-7feb521a0000 r--p 00110000 00:2a 15698753800                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_pmix_pmix2x.so
+7feb521a0000-7feb521a4000 rw-p 00111000 00:2a 15698753800                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_pmix_pmix2x.so
+7feb521a4000-7feb521a7000 rw-p 00000000 00:00 0 
+7feb521a7000-7feb521aa000 rw-s 00000000 00:13 38861817                   /dev/shm/ucx_shm_posix_2019f180 (deleted)
+7feb521aa000-7feb521ac000 r-xp 00000000 00:2a 16729646868                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_psec_native.so
+7feb521ac000-7feb523ab000 ---p 00002000 00:2a 16729646868                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_psec_native.so
+7feb523ab000-7feb523ac000 r--p 00001000 00:2a 16729646868                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_psec_native.so
+7feb523ac000-7feb523ad000 rw-p 00002000 00:2a 16729646868                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/pmix/mca_psec_native.so
+7feb523ad000-7feb523ae000 ---p 00000000 00:00 0 
+7feb523ae000-7feb52bae000 rw-p 00000000 00:00 0 
+7feb52bae000-7feb52bb2000 r-xp 00000000 00:2a 15698753834                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_ess_pmi.so
+7feb52bb2000-7feb52db1000 ---p 00004000 00:2a 15698753834                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_ess_pmi.so
+7feb52db1000-7feb52db2000 r--p 00003000 00:2a 15698753834                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_ess_pmi.so
+7feb52db2000-7feb52db3000 rw-p 00004000 00:2a 15698753834                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_ess_pmi.so
+7feb52db3000-7feb52db5000 r-xp 00000000 00:2a 15698758193                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_slurm.so
+7feb52db5000-7feb52fb4000 ---p 00002000 00:2a 15698758193                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_slurm.so
+7feb52fb4000-7feb52fb5000 r--p 00001000 00:2a 15698758193                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_slurm.so
+7feb52fb5000-7feb52fb6000 rw-p 00002000 00:2a 15698758193                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_slurm.so
+7feb52fb6000-7feb52fb7000 r-xp 00000000 00:2a 15698758191                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_orte.so
+7feb52fb7000-7feb531b7000 ---p 00001000 00:2a 15698758191                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_orte.so
+7feb531b7000-7feb531b8000 r--p 00001000 00:2a 15698758191                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_orte.so
+7feb531b8000-7feb531b9000 rw-p 00002000 00:2a 15698758191                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_orte.so
+7feb531b9000-7feb531c1000 r-xp 00000000 00:2a 15698758189                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_ompi.so
+7feb531c1000-7feb533c0000 ---p 00008000 00:2a 15698758189                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_ompi.so
+7feb533c0000-7feb533c1000 r--p 00007000 00:2a 15698758189                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_ompi.so
+7feb533c1000-7feb533c3000 rw-p 00008000 00:2a 15698758189                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_ompi.so
+7feb533c3000-7feb533c4000 r-xp 00000000 00:2a 15698758187                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_flux.so
+7feb533c4000-7feb535c4000 ---p 00001000 00:2a 15698758187                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_flux.so
+7feb535c4000-7feb535c5000 r--p 00001000 00:2a 15698758187                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_flux.so
+7feb535c5000-7feb535c6000 rw-p 00002000 00:2a 15698758187                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_schizo_flux.so
+7feb535c6000-7feb535c8000 r-xp 00000000 00:2a 15698753806                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_reachable_weighted.so
+7feb535c8000-7feb537c7000 ---p 00002000 00:2a 15698753806                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_reachable_weighted.so
+7feb537c7000-7feb537c8000 r--p 00001000 00:2a 15698753806                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_reachable_weighted.so
+7feb537c8000-7feb537c9000 rw-p 00002000 00:2a 15698753806                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_reachable_weighted.so
+7feb537c9000-7feb537cc000 r-xp 00000000 00:2a 15698753808                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_shmem_mmap.so
+7feb537cc000-7feb539cb000 ---p 00003000 00:2a 15698753808                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_shmem_mmap.so
+7feb539cb000-7feb539cc000 r--p 00002000 00:2a 15698753808                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_shmem_mmap.so
+7feb539cc000-7feb539cd000 rw-p 00003000 00:2a 15698753808                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/openmpi/mca_shmem_mmap.so
+7feb539cd000-7feb539e2000 r-xp 00000000 09:7f 1073741900                 /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7feb539e2000-7feb53be1000 ---p 00015000 09:7f 1073741900                 /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7feb53be1000-7feb53be2000 r--p 00014000 09:7f 1073741900                 /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7feb53be2000-7feb53be3000 rw-p 00015000 09:7f 1073741900                 /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7feb53be3000-7feb53bf8000 r-xp 00000000 09:7f 1075165203                 /usr/lib64/libz.so.1.2.7
+7feb53bf8000-7feb53df7000 ---p 00015000 09:7f 1075165203                 /usr/lib64/libz.so.1.2.7
+7feb53df7000-7feb53df8000 r--p 00014000 09:7f 1075165203                 /usr/lib64/libz.so.1.2.7
+7feb53df8000-7feb53df9000 rw-p 00015000 09:7f 1075165203                 /usr/lib64/libz.so.1.2.7
+7feb53df9000-7feb53dfb000 r-xp 00000000 09:7f 1073763470                 /usr/lib64/libutil-2.17.so
+7feb53dfb000-7feb53ffa000 ---p 00002000 09:7f 1073763470                 /usr/lib64/libutil-2.17.so
+7feb53ffa000-7feb53ffb000 r--p 00001000 09:7f 1073763470                 /usr/lib64/libutil-2.17.so
+7feb53ffb000-7feb53ffc000 rw-p 00002000 09:7f 1073763470                 /usr/lib64/libutil-2.17.so
+7feb53ffc000-7feb54003000 r-xp 00000000 09:7f 1073763466                 /usr/lib64/librt-2.17.so
+7feb54003000-7feb54202000 ---p 00007000 09:7f 1073763466                 /usr/lib64/librt-2.17.so
+7feb54202000-7feb54203000 r--p 00006000 09:7f 1073763466                 /usr/lib64/librt-2.17.so
+7feb54203000-7feb54204000 rw-p 00007000 09:7f 1073763466                 /usr/lib64/librt-2.17.so
+7feb54204000-7feb5420e000 r-xp 00000000 09:7f 1073988682                 /usr/lib64/libnuma.so.1.0.0
+7feb5420e000-7feb5440e000 ---p 0000a000 09:7f 1073988682                 /usr/lib64/libnuma.so.1.0.0
+7feb5440e000-7feb5440f000 r--p 0000a000 09:7f 1073988682                 /usr/lib64/libnuma.so.1.0.0
+7feb5440f000-7feb54410000 rw-p 0000b000 09:7f 1073988682                 /usr/lib64/libnuma.so.1.0.0
+7feb54410000-7feb54412000 r-xp 00000000 09:7f 1073763442                 /usr/lib64/libdl-2.17.so
+7feb54412000-7feb54612000 ---p 00002000 09:7f 1073763442                 /usr/lib64/libdl-2.17.so
+7feb54612000-7feb54613000 r--p 00002000 09:7f 1073763442                 /usr/lib64/libdl-2.17.so
+7feb54613000-7feb54614000 rw-p 00003000 09:7f 1073763442                 /usr/lib64/libdl-2.17.so
+7feb54614000-7feb5470c000 r-xp 00000000 00:2a 15084635393                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libopen-pal.so.40.10.6
+7feb5470c000-7feb5490c000 ---p 000f8000 00:2a 15084635393                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libopen-pal.so.40.10.6
+7feb5490c000-7feb5490f000 r--p 000f8000 00:2a 15084635393                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libopen-pal.so.40.10.6
+7feb5490f000-7feb54915000 rw-p 000fb000 00:2a 15084635393                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libopen-pal.so.40.10.6
+7feb54915000-7feb5491d000 rw-p 00000000 00:00 0 
+7feb5491d000-7feb549cb000 r-xp 00000000 00:2a 15084635410                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libopen-rte.so.40.10.5
+7feb549cb000-7feb54bca000 ---p 000ae000 00:2a 15084635410                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libopen-rte.so.40.10.5
+7feb54bca000-7feb54bcc000 r--p 000ad000 00:2a 15084635410                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libopen-rte.so.40.10.5
+7feb54bcc000-7feb54bd0000 rw-p 000af000 00:2a 15084635410                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libopen-rte.so.40.10.5
+7feb54bd0000-7feb54bd3000 rw-p 00000000 00:00 0 
+7feb54bd3000-7feb54cc8000 r-xp 00000000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54cc8000-7feb54cc9000 r-xp 000f5000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54cc9000-7feb54ccb000 r-xp 000f6000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54ccb000-7feb54ccd000 r-xp 000f8000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54ccd000-7feb54cd2000 r-xp 000fa000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54cd2000-7feb54cd4000 r-xp 000ff000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54cd4000-7feb54d97000 r-xp 00101000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54d97000-7feb54f96000 ---p 001c4000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54f96000-7feb54f9a000 r--p 001c3000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54f9a000-7feb54f9c000 rw-p 001c7000 09:7f 1073763436                 /usr/lib64/libc-2.17.so
+7feb54f9c000-7feb54fa1000 rw-p 00000000 00:00 0 
+7feb54fa1000-7feb54fb8000 r-xp 00000000 09:7f 1073763462                 /usr/lib64/libpthread-2.17.so
+7feb54fb8000-7feb551b7000 ---p 00017000 09:7f 1073763462                 /usr/lib64/libpthread-2.17.so
+7feb551b7000-7feb551b8000 r--p 00016000 09:7f 1073763462                 /usr/lib64/libpthread-2.17.so
+7feb551b8000-7feb551b9000 rw-p 00017000 09:7f 1073763462                 /usr/lib64/libpthread-2.17.so
+7feb551b9000-7feb551bd000 rw-p 00000000 00:00 0 
+7feb551bd000-7feb551e2000 r-xp 00000000 09:7f 1073776089                 /usr/lib64/libgomp.so.1.0.0
+7feb551e2000-7feb553e1000 ---p 00025000 09:7f 1073776089                 /usr/lib64/libgomp.so.1.0.0
+7feb553e1000-7feb553e2000 r--p 00024000 09:7f 1073776089                 /usr/lib64/libgomp.so.1.0.0
+7feb553e2000-7feb553e3000 rw-p 00025000 09:7f 1073776089                 /usr/lib64/libgomp.so.1.0.0
+7feb553e3000-7feb554bb000 r-xp 00000000 00:2a 15084635415                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmpi.so.40.10.4
+7feb554bb000-7feb556bb000 ---p 000d8000 00:2a 15084635415                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmpi.so.40.10.4
+7feb556bb000-7feb556bc000 r--p 000d8000 00:2a 15084635415                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmpi.so.40.10.4
+7feb556bc000-7feb556cd000 rw-p 000d9000 00:2a 15084635415                /opt/share/openmpi/3.1.6/MLNX_OFED_LINUX-5.4-3.0.3.0_gcc_4.8.5/lib/libmpi.so.40.10.4
+7feb556cd000-7feb556df000 rw-p 00000000 00:00 0 
+7feb556df000-7feb557e0000 r-xp 00000000 09:7f 1073763444                 /usr/lib64/libm-2.17.so
+7feb557e0000-7feb559df000 ---p 00101000 09:7f 1073763444                 /usr/lib64/libm-2.17.so
+7feb559df000-7feb559e0000 r--p 00100000 09:7f 1073763444                 /usr/lib64/libm-2.17.so
+7feb559e0000-7feb559e1000 rw-p 00101000 09:7f 1073763444                 /usr/lib64/libm-2.17.so
+7feb559e1000-7feb55a03000 r-xp 00000000 09:7f 1073763429                 /usr/lib64/ld-2.17.so
+7feb55a03000-7feb55a06000 rw-s 00000000 00:00 0 
+7feb55a06000-7feb55a09000 rw-s 00000000 00:13 38421315                   /dev/shm/ucx_shm_posix_30c491d1 (deleted)
+7feb55a09000-7feb55a0c000 rw-s 00000000 00:00 0 
+7feb55a0c000-7feb55a0f000 rw-s 00000000 00:13 38017932                   /dev/shm/ucx_shm_posix_633b7952 (deleted)
+7feb55a0f000-7feb55a12000 rw-s 00000000 00:00 0 
+7feb55a12000-7feb55a15000 rw-s 00000000 00:13 38963237                   /dev/shm/ucx_shm_posix_50174c7a (deleted)
+7feb55a15000-7feb55a17000 rw-p 00000000 00:00 0 
+7feb55a17000-7feb55a1a000 rw-s 00000000 00:00 0 
+7feb55a1a000-7feb55a1b000 -w-s 00900000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55a1b000-7feb55a1c000 r--s 00700000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55a1c000-7feb55a1d000 r--s 00500000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55a1d000-7feb55b00000 rw-p 00000000 00:00 0 
+7feb55b00000-7feb55ba0000 rw-p 00000000 00:00 0 
+7feb55ba0000-7feb55beb000 rw-p 00000000 00:00 0 
+7feb55beb000-7feb55bec000 -w-s 00902000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bec000-7feb55bed000 -w-s 00901000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bed000-7feb55bf0000 rw-s 00000000 00:04 307134511                  /SYSV00000000 (deleted)
+7feb55bf0000-7feb55bf3000 rw-s 00000000 00:13 38962245                   /dev/shm/ucx_shm_posix_4122ad30 (deleted)
+7feb55bf3000-7feb55bf4000 -w-s 00900000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bf4000-7feb55bf5000 r--s 00700000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bf5000-7feb55bf6000 r--s 00500000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bf6000-7feb55bf7000 -w-s 00900000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bf7000-7feb55bf8000 r--s 00700000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bf8000-7feb55bf9000 r--s 00500000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bf9000-7feb55bfa000 -w-s 00901000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bfa000-7feb55bfb000 -w-s 00900000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bfb000-7feb55bfc000 r--s 00700000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bfc000-7feb55bfd000 r--s 00500000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bfd000-7feb55bfe000 -w-s 00901000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bfe000-7feb55bff000 -w-s 00900000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55bff000-7feb55c00000 r--s 00700000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55c00000-7feb55c01000 r--s 00500000 00:05 17491                      /dev/infiniband/uverbs0
+7feb55c01000-7feb55c02000 rw-p 00000000 00:00 0 
+7feb55c02000-7feb55c03000 r--p 00021000 09:7f 1073763429                 /usr/lib64/ld-2.17.so
+7feb55c03000-7feb55c04000 rw-p 00022000 09:7f 1073763429                 /usr/lib64/ld-2.17.so
+7feb55c04000-7feb55c05000 rw-p 00000000 00:00 0 
+7fff59602000-7fff59624000 rw-p 00000000 00:00 0                          [stack]
+7fff59758000-7fff5975a000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[ppx00:10278] *** Process received signal ***
+[ppx00:10278] Signal: Aborted (6)
+[ppx00:10278] Signal code:  (-6)
+[ppx00:10278] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x7feb54fb0630]
+[ppx00:10278] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x7feb54c09387]
+[ppx00:10278] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x7feb54c0aa78]
+[ppx00:10278] [ 3] /usr/lib64/libc.so.6(+0x78f67)[0x7feb54c4bf67]
+[ppx00:10278] [ 4] /usr/lib64/libc.so.6(+0x82b36)[0x7feb54c55b36]
+[ppx00:10278] [ 5] /usr/lib64/libc.so.6(__libc_malloc+0x4c)[0x7feb54c5878c]
+[ppx00:10278] [ 6] /usr/lib64/libc.so.6(+0x6ec4d)[0x7feb54c41c4d]
+[ppx00:10278] [ 7] ./bin/runprog[0x400df0]
+[ppx00:10278] [ 8] ./bin/runprog[0x401a2b]
+[ppx00:10278] [ 9] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x7feb54bf5555]
+[ppx00:10278] [10] ./bin/runprog[0x400be9]
+[ppx00:10278] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node ppx00 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 
 value=6250
 count=8
-repeat=30
+repeat=100
 
 for ((i=1; i<=count; i++)); do
     sum=0
@@ -10,17 +10,14 @@ for ((i=1; i<=count; i++)); do
     min=""
     
     for ((j=1; j<=repeat; j++)); do
-        result=$(mpirun ./bin/runprog "$value")
-        
-        # 合計に加算
+        result=$(mpirun  -rf rankfile -report-bindings ./bin/runprog "$value")
+        #result=$(mpirun ./bin/runprog "$value")
         sum=$(echo "$sum + $result" | bc)
-        
-        # max更新
+
         if [[ -z "$max" || $(echo "$result > $max" | bc) -eq 1 ]]; then
             max=$result
         fi
         
-        # min更新
         if [[ -z "$min" || $(echo "$result < $min" | bc) -eq 1 ]]; then
             min=$result
         fi

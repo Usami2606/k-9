@@ -1,0 +1,8 @@
+rank 0=ppx00 slot=0:0-2
+rank 1=ppx00 slot=0:3-5
+rank 2=ppx00 slot=0:6-8
+rank 3=ppx2-01 slot=0:9-11
+rank 4=ppx2-01 slot=1:9-11
+rank 5=ppx02 slot=1:0-2
+rank 6=ppx02 slot=1:3-5
+rank 7=ppx02 slot=1:6-8
