@@ -8,7 +8,7 @@ total_time=0
 
 for i in {1..10}; do
     output=$(mpirun -report-bindings ./bin/runprog)
-    time=$(echo "$output" | grep -oP '\d+\.\d+')
+    time=$(echo "$outpu | grep -oP '\d+\.\d+')
     total_time=$(echo "$total_time + $time" | bc)
 done
 

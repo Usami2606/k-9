@@ -1,6 +1,6 @@
 BIN_DIR = bin
 TARGET = $(BIN_DIR)/runprog
-FILE ?= allgather.c
+FILE ?= circle.c
 
 
 run:

@@ -27,18 +27,24 @@ int main(int argc, char* argv[]) {
     double *recvbuf = malloc(sizeof(double) * length * size);
 
     int t;
+    double res_time = 0.0;
 
     for (t = 0; t < length; t++) {
         sendbuf[t] = rank * 100 + t;
     }
 
-    MPI_Barrier(MPI_COMM_WORLD);
-    double start = MPI_Wtime();
+    for (t = 0; t < 100; t++) {
 
-    MPI_Allgather(sendbuf, length, MPI_DOUBLE, recvbuf, length, MPI_DOUBLE, MPI_COMM_WORLD);
+        MPI_Barrier(MPI_COMM_WORLD);
+        double start = MPI_Wtime();
 
-    MPI_Barrier(MPI_COMM_WORLD);
-    double res_time = MPI_Wtime() - start;
+        MPI_Allgather(sendbuf, length, MPI_DOUBLE, recvbuf, length, MPI_DOUBLE, MPI_COMM_WORLD);
+
+        MPI_Barrier(MPI_COMM_WORLD);
+        res_time += MPI_Wtime() - start;
+
+    }
+
     double max_time;
 
     MPI_Reduce(&res_time, &max_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
@@ -55,7 +61,7 @@ int main(int argc, char* argv[]) {
         //     }
         //     printf("...\n");
         // }
-        printf("%f\n", max_time);
+        printf("%f\n", max_time / (size - 1) / 100);
     }
 
     free(sendbuf);

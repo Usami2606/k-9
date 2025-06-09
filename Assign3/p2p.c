@@ -37,29 +37,22 @@ int main(int argc, char* argv[]){
     MPI_Status status;
     double start = MPI_Wtime();
 
-    if (rank == 0) {
-        // printf("rank0: sending...\n");
-        // fflush(stdout);
-        MPI_Send(sendbuf, length, MPI_DOUBLE, 1, 317, MPI_COMM_WORLD);
-        MPI_Recv(recvbuf, length, MPI_DOUBLE, 1, 317, MPI_COMM_WORLD, &status);
-        double meas_time = MPI_Wtime() - start;
-        printf("%f\n", meas_time / 2);
-        // printf("rank0: sent.\n");
-        // fflush(stdout);
-    } else if (rank == 1) {
-        // printf("rank1: receiving...\n");
-        // fflush(stdout);
-        MPI_Recv(recvbuf, length, MPI_DOUBLE, 0, 317, MPI_COMM_WORLD, &status);
-        MPI_Send(recvbuf, length, MPI_DOUBLE, 0, 317, MPI_COMM_WORLD);
-        // printf("rank1: received.\n");
-        // fflush(stdout);
-        // printf("RE %f\n", MPI_Wtime() - start);
-        // fflush(stdout);
+    for (t = 0; t < 100; t++) {
+        if (rank == 0) {
+            MPI_Send(sendbuf, length, MPI_DOUBLE, 1, 317, MPI_COMM_WORLD);
+            MPI_Recv(recvbuf, length, MPI_DOUBLE, 1, 317, MPI_COMM_WORLD, &status);
+        } else if (rank == 1) {
+            MPI_Recv(recvbuf, length, MPI_DOUBLE, 0, 317, MPI_COMM_WORLD, &status);
+            MPI_Send(recvbuf, length, MPI_DOUBLE, 0, 317, MPI_COMM_WORLD);
+        }
     }
 
-
     MPI_Barrier(MPI_COMM_WORLD);
-    // fflush(stdout);
+    double meas_time = MPI_Wtime() - start;
+
+    if (rank == 0) {
+        printf("%f\n", meas_time / 200);
+    }
 
     // if (rank == 1) {
     //     MPI_Send(&meas_time, 1, MPI_DOUBLE, 0, 428, MPI_COMM_WORLD);
